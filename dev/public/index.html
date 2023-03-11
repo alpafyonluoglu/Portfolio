@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alp Afyonluoğlu</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+    <link rel="icon" type="image/svg+xml" href="/res/favicon.svg">
+    <link rel="icon" type="image/png" href="/res/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="title" property="og:title" content="Alp Afyonluoğlu">
+    <meta property="og:type" content="Personal website">
+    <meta name="description" property="og:description" content="I am a self-motivated backend developer and machine learning & deep learning enthusiast. It is my
+                    junior year studying computer science/engineering at Bilkent University, and I am also working as a
+                    part-time backend support engineer at Jotform. I consider myself a quick learner software developer
+                    who prioritizes planning and spending time as efficiently as possible. I am eager to learn any topic
+                    that expands the limits of algorithms.">
+    <meta name="author" content="Alp Afyonluoğlu">
+    <meta name="image" property="og:image" content="https://alpafyonluoglu.dev/res/thumbnail.jpg">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z69VWL4RF7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-Z69VWL4RF7');
+    </script>
+</head>
+<body>
+
+<!----------------------------------------------------------------------------------------------------------------------
+
+🥚 NOTICE FOR EGG HUNTERS 🥚
+There are several easter eggs hidden in this website. Since eggs were planted just for fun, no precaution is taken to
+hide eggs in the source code. If you are wandering here, in the source code, you may come across some codes that may
+spoil the hunting for you. Therefore, I do not recommend scrolling down after this point.
+
+                    +----------------------------------------------------------------------+
+                ==> |        Copyright © 2022 Alp Afyonluoğlu | All Rights Reserved        | <==
+                    +----------------------------------------------------------------------+
+
+----------------------------------------------------------------------------------------------------------------------->
+
+<div class="navbar navbarTransparent" id="navbar">
+    <div class="logoContainer unselectable logoContainerTransparent" id="logoContainer">
+        <p class="logoL unselectable logoLetterL" id="logoL"><b><span
+                class="accentColor logoFirstLetter logoFirstLetterMargin"
+                id="logoLF">A</span>lp</b></p>
+        <p class="logoR unselectable logoLetterR" id="logoR"><b><span
+                class="accentColor logoFirstLetter logoFirstLetterMargin"
+                id="logoRF">A</span>fyonluoglu</b></p>
+    </div>
+
+    <div class="buttons buttonsTransparent" id="buttons">
+        <a href="docs/Alp_Afyonluoglu_CV_Eng.pdf" class="button buttonTransparent" id="btCv">CV</a>
+        <a onclick="scrollToSection('readme')" class="button buttonTransparent" id="btReadme">Readme</a>
+        <a onclick="scrollToSection('education')" class="button buttonTransparent" id="btEducation">Education</a>
+        <a onclick="scrollToSection('experience')" class="button buttonTransparent" id="btExperience">Experience</a>
+        <a onclick="scrollToSection('projects')" class="button buttonTransparent" id="btProjects">Projects</a>
+        <a onclick="scrollToSection('languages')" class="button buttonTransparent" id="btLanguages">Technologies</a>
+    </div>
+</div>
+<div class="pageTop" id="top" data-parallax="scroll">
+    <!--    <div class="filter" id="filter"></div>-->
+    <canvas class="topCanvas" id="topCanvas" width="720" height="720">
+        Your browser does not support the canvas element.
+    </canvas>
+
+    <div class="eeBox eeBoxMin ee1Box" id="ee1">
+        <p class="eeBoxTitle" id="eeMainBoxTitle">Congrats, you found an easter egg!</p>
+        <p class="eeBoxText" id="eeMainBoxText">I enjoy hunting easter eggs; so I planted some in my website in case you
+            enjoy hunting too. Congrats on finding the first one. If you would like to continue, here is your next hint:
+            (After finding the next egg, you can come back here to view your badges)
+        </p>
+
+        <div class="eeBadgeGrid hidden" id="eeBadgeGrid">
+            <div class="eeInfoTitle eeInfoCentered unselectable hidden" id="ee0Badge">
+                <img class="eeIcon" src="res/icons/ee.png" alt="Easter egg">
+                <p class="eeTitle">Off-limit</p>
+            </div>
+
+            <div class="eeInfoTitle eeInfoCentered unselectable hidden" id="ee1Badge">
+                <img class="eeIcon" src="res/icons/ee.png" alt="Easter egg">
+                <p class="eeTitle">Changelog</p>
+            </div>
+        </div>
+
+        <div class="ee ee1" id="eeMainHint">
+            <div class="eeInfo">
+                <div class="eeInfoTitle unselectable">
+                    <img class="eeIcon" src="res/icons/ee.png" alt="Easter egg">
+                    <p class="eeTitle">Changelog</p>
+                </div>
+                <p class="eeText">Refresh to see different themes. Look out for changes...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="name-box">
+        <h1 class="name"><span class="accentColor">A</span>lp <span
+                class="accentColor">A</span>fyonluoglu</h1>
+        <h2 class="sub-title writer" id="subTitle">Scroll down, and let me introduce myself...</h2>
+    </div>
+
+    <div class="links">
+        <a href="mailto:contact@alpafyonluoglu.dev"><img class="iconTop" src="res/icons/email.png" alt="Email"></a>
+        <a href="https://github.com/alpafyonluoglu"><img class="iconTop" src="res/icons/github.png" alt="GitHub"></a>
+        <a href="https://www.linkedin.com/in/alpafyonluoglu/"><img class="iconTop" src="res/icons/linkedin.png"
+                                                                   alt="LinkedIn"></a>
+        <a href="https://twitter.com/alpafyonluoglu"><img class="iconTop" src="res/icons/twitter.png" alt="Twitter"></a>
+        <a href="https://www.flickr.com/alpafyonluoglu/"><img class="iconTop" src="res/icons/flickr.png"
+                                                              alt="Flickr"></a>
+    </div>
+
+    <p class="bgAttribution unselectable">Refresh to see another theme.</p>
+</div>
+<div class="content" id="content">
+    <div class="section" id="readme" style="min-height: 36rem">
+        <div class="container">
+            <h2 class="title">Re<span class="accentColor">a</span>dme</h2>
+            <div class="floating">
+                <div class="profile-card">
+                    <img src="res/alpafyonluoglu.jpg" class="pp" alt="Alp Afyonluoğlu">
+                    <p class="profile-name">Alp Afyonluoğlu</p>
+                    <p class="profile-text">👋🏻🌍❕</p>
+                </div>
+            </div>
+            <div class="right19">
+                <p class="text justify margin-top">
+                    I am a self-motivated backend developer and machine learning & deep learning enthusiast. It is my
+                    junior year studying computer science/engineering at Bilkent University, and I am also working as a
+                    part-time backend support engineer at Jotform. I consider myself a quick learner software developer
+                    who prioritizes planning and spending time as efficiently as possible. I am eager to learn any topic
+                    that expands the limits of algorithms.
+                    <br><br>
+                    I can code backend and frontend of web apps as a full-stack developer, manage SQL/NoSQL databases,
+                    host projects at GCP, and develop native Android apps as well. I am currently focused on backend
+                    development, but also researching data science and machine learning related areas. I am looking for
+                    internship opportunities to enhance my capabilities and increase my knowledge about the industry.
+                    <br><br>
+                    I love music and enjoy playing drums, taking photographs, tango dancing, playing chess and hiking. I
+                    also like designing user interfaces, video editing, developing hardware prototypes with Arduino,
+                    reading about cybersecurity, attending competitive programming competitions, and developing
+                    software projects for daily-life use.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="education">
+        <div class="container">
+            <h2 class="title">Educ<span class="accentColor">a</span>tion</h2>
+
+            <div class="card projectCard nonDetailedCard">
+                <div class="floating">
+                    <img src="res/bilkent.svg" class="small-logo" alt="Bilkent University">
+                </div>
+
+                <div class="top">
+                    <p class="text"><b>Bilkent University</b></p>
+                    <p class="subText">(2020 - expected 2024)</p>
+                </div>
+                <div class="briefInfo">
+                    <ul class="text">
+                        <li>Bachelor of Science in Computer Science/Engineering.</li>
+                        <li>High Honor Student (2020 – 2022), Honor Student (2022 Spring).</li>
+                        <li>Activities and clubs: Member of Google Developer Student Club,
+                            ACM Club, Exploit Studio (cyber security) Club, Music Club.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card projectCard nonDetailedCard">
+                <div class="floating">
+                    <img src="res/obl.jpeg" class="small-logo" alt="Bilkent High School">
+                    <img src="res/ib.png" class="sub-small-logo" alt="International Baccalaureate">
+                </div>
+
+                <div class="top">
+                    <p class="text"><b>Private Bilkent High School</b></p>
+                    <p class="subText">(2016 - 2020)</p>
+                </div>
+                <div class="briefInfo">
+                    <ul class="text">
+                        <li>International Baccalaureate (IB) Diploma Programme graduate.</li>
+                        <li>Activities and clubs: Computer Club, Music Club.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="experience">
+        <div class="container">
+            <h2 class="title">Experience</h2>
+
+            <div class="card projectCard nonDetailedCard">
+                <div class="floating">
+                    <img src="res/jotform.svg" class="small-logo" alt="Jotform">
+                </div>
+
+                <div class="top">
+                    <p class="text"><b>Jotform</b></p>
+                    <p class="subText">(Sep 2022 - Present)</p>
+                </div>
+                <div class="briefInfo">
+                    <ul class="text">
+                        <li>Part-time backend support engineer.</li>
+                        <li>Previously had an internship as a backend developer.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="projects">
+        <div class="container">
+            <h2 class="title">Projects</h2>
+            <p class="text">Here are some of my projects. Click on related buttons to view a project's readme file or
+                visit its website.</p>
+
+            <div class="card projectCard" id="card_planner">
+                <div class="floating">
+                    <img src="docs/projects/planner/logo.png" class="small-logo" alt="Planner">
+                </div>
+
+                <div class="top">
+                    <p class="text"><b>Planner</b></p>
+                    <p class="subText">(Aug 2021 - Present)</p>
+                    <div class="more">
+                        <a onclick="toggleDetails(this)" data-project="planner" data-loaded="false"
+                           class="details unselectable" id="details_toggle_planner">Show Readme</a>
+                    </div>
+                </div>
+                <div class="briefInfo">
+                    <ul class="text">
+                        <li>Personal time management application, analyzing calendar events, given activities and user
+                            actions to create personalized time plans.
+                        </li>
+                        <li>Android application written in Java.</li>
+                        <li>Personal project.</li>
+                    </ul>
+                </div>
+                <div class="detailedInfo" id="details_planner">
+                    <hr class="line">
+                </div>
+            </div>
+
+            <div class="card projectCard" id="card_bhmun">
+                <div class="floating">
+                    <img src="docs/projects/bhmun/logo.png" class="small-logo" alt="Bhmun">
+                </div>
+
+                <div class="top">
+                    <p class="text"><b>Bhmun Website</b></p>
+                    <p class="subText">(Apr 2019 - Jan 2023)</p>
+                    <div class="more">
+                        <a href="https://www.bhmun.org" class="projectLinkContainer unselectable"><img
+                                src="res/icons/link.png" class="projectLink" alt="Link"></a>
+                        <a onclick="toggleDetails(this)" data-project="bhmun" data-loaded="false"
+                           class="details unselectable" id="details_toggle_bhmun">Show Readme</a>
+                    </div>
+                </div>
+                <div class="briefInfo">
+                    <ul class="text">
+                        <li>Website of Private Bilkent High School's MUN club. Developed a drive subdomain for creating
+                            user profiles and accessing cloud storage via login.
+                        </li>
+                        <li>Backend written in NodeJS (and Express), and frontend written in JS, HTML, CSS.</li>
+                        <li>Used Firebase Realtime Database.</li>
+                        <li>Individual project, related to Private Bilkent High School.</li>
+                    </ul>
+                </div>
+                <div class="detailedInfo" id="details_bhmun">
+                    <hr class="line">
+                </div>
+            </div>
+
+            <div class="card projectCard" id="card_bilasmus">
+                <div class="floating">
+                    <img src="docs/projects/bilasmus/logo.png" class="small-logo" alt="Bilasmus">
+                </div>
+
+                <div class="top">
+                    <p class="text"><b>Bilasmus</b></p>
+                    <p class="subText">(Sep 2022 - Dec 2022)</p>
+                    <div class="more">
+                        <a href="https://github.com/alpafyonluoglu/Bilasmus" class="projectLinkContainer unselectable"><img
+                                src="res/icons/github.png" class="projectLink" alt="GitHub Link"></a>
+                        <a onclick="toggleDetails(this)" data-project="bilasmus" data-loaded="false"
+                           class="details unselectable" id="details_toggle_bilasmus">Show Readme</a>
+                    </div>
+                </div>
+                <div class="briefInfo">
+                    <ul class="text">
+                        <li>Web app prototype for managing university-accepted Erasmus students.</li>
+                        <li>Developed the backend, which used NodeJS, PostgreSQL, MVC pattern, and design patterns.</li>
+                        <li>Group project (5 people), related to Bilkent University.</li>
+                    </ul>
+                </div>
+                <div class="detailedInfo" id="details_bilasmus">
+                    <hr class="line">
+                </div>
+            </div>
+
+            <div class="card projectCard" id="card_dualweb">
+                <div class="floating">
+                    <img src="docs/projects/dualweb/logo.png" class="small-logo" alt="Dual Web">
+                </div>
+
+                <div class="top">
+                    <p class="text"><b>Dual Web</b></p>
+                    <p class="subText">(Oct 2021 – Oct 2021)</p>
+                    <div class="more">
+                        <a href="https://github.com/alpafyonluoglu/DualWeb"
+                           class="projectLinkContainer unselectable"><img src="res/icons/github.png" class="projectLink"
+                                                                          alt="GitHub Link"></a>
+                        <a onclick="toggleDetails(this)" data-project="dualweb" data-loaded="false"
+                           class="details unselectable" id="details_toggle_dualweb">Show Readme</a>
+                    </div>
+                </div>
+                <div class="briefInfo">
+                    <ul class="text">
+                        <li>A simple browser extension allowing users to log into the same website with two different
+                            accounts.
+                        </li>
+                        <li>My first open-source project.</li>
+                        <li>Written in JS, HTML, CSS.</li>
+                        <li>Personal project.</li>
+                    </ul>
+                </div>
+                <div class="detailedInfo" id="details_dualweb">
+                    <hr class="line">
+                </div>
+            </div>
+
+            <div class="card projectCard" id="card_ibevi">
+                <div class="floating">
+                    <img src="docs/projects/ibevi/logo.png" class="small-logo" alt="Student Registry App">
+                </div>
+
+                <div class="top">
+                    <p class="text"><b>Student Registry App</b></p>
+                    <p class="subText">(Jun 2020 – Jul 2020)</p>
+                    <div class="more">
+                        <a onclick="toggleDetails(this)" data-project="ibevi" data-loaded="false"
+                           class="details unselectable" id="details_toggle_ibevi">Show Readme</a>
+                    </div>
+                </div>
+                <div class="briefInfo">
+                    <ul class="text">
+                        <li>A database app developed for "IB Evi" to register and query information about students.</li>
+                        <li>Android application written in Java and used SQL.</li>
+                        <li>Synced data with Firebase Realtime Database.</li>
+                        <li>Individual project.</li>
+                    </ul>
+                </div>
+                <div class="detailedInfo" id="details_ibevi">
+                    <hr class="line">
+                </div>
+            </div>
+
+            <div class="card projectCard" id="card_ada">
+                <div class="floating">
+                    <img src="docs/projects/ada/logo.png" class="small-logo" alt="Ada Assistant">
+                </div>
+
+                <div class="top">
+                    <p class="text"><b>Ada Assistant</b></p>
+                    <p class="subText">(Jun 2018 – Dec 2020)</p>
+                    <div class="more">
+                        <a onclick="toggleDetails(this)" data-project="ada" data-loaded="false"
+                           class="details unselectable" id="details_toggle_ada">Show Readme</a>
+                    </div>
+                </div>
+                <div class="briefInfo">
+                    <ul class="text">
+                        <li>SMS chatbot. Personal assistant app analyzing and responding to SMS messages when a missed
+                            call is received, or someone sends an SMS message that mentions Ada. Depending on the access
+                            level of the person sending messages, the app performs actions and makes changes on the
+                            device while considering coarse device location and what is on device owner's calendar.
+                        </li>
+                        <li>Android application developed in Java.</li>
+                        <li>Personal project.</li>
+                    </ul>
+                </div>
+                <div class="detailedInfo" id="details_ada">
+                    <hr class="line">
+                </div>
+            </div>
+
+            <div class="card projectCard" id="card_trainly">
+                <div class="floating">
+                    <img src="docs/projects/trainly/logo.png" class="small-logo" alt="Trainly">
+                </div>
+
+                <div class="top">
+                    <p class="text"><b>Trainly</b></p>
+                    <p class="subText">(Jan 2021 – June 2021)</p>
+                    <div class="more">
+                        <a href="https://github.com/alpafyonluoglu/Trainly"
+                           class="projectLinkContainer unselectable"><img src="res/icons/github.png" class="projectLink"
+                                                                          alt="GitHub Link"></a>
+                        <a onclick="toggleDetails(this)" data-project="trainly" data-loaded="false"
+                           class="details unselectable" id="details_toggle_trainly">Show Readme</a>
+                    </div>
+                </div>
+                <div class="briefInfo">
+                    <ul class="text">
+                        <li>A mobile app for creating profiles, managing train data, and ticket entries to buy/sell
+                            tickets.
+                        </li>
+                        <li>Android application written in Java and used SQL.</li>
+                        <li>Synced data with Firebase Realtime Database.</li>
+                        <li>Group project (4 people), related to Bilkent University.</li>
+                    </ul>
+                </div>
+                <div class="detailedInfo" id="details_trainly">
+                    <hr class="line">
+                </div>
+            </div>
+
+            <div class="card projectCard" id="card_eda">
+                <div class="floating">
+                    <img src="docs/projects/eda/logo.png" class="small-logo" alt="Eda Assistant">
+                </div>
+
+                <div class="top">
+                    <p class="text"><b>Eda Assistant</b></p>
+                    <p class="subText">(Dec 2018 – Mar 2020)</p>
+                    <div class="more">
+                        <a href="http://alp.afyonluoglu.org/eda-asistan/" class="projectLinkContainer unselectable"><img
+                                src="res/icons/link.png" class="projectLink" alt="Link"></a>
+                        <a onclick="toggleDetails(this)" data-project="eda" data-loaded="false"
+                           class="details unselectable" id="details_toggle_eda">Show Readme</a>
+                    </div>
+                </div>
+                <div class="briefInfo">
+                    <ul class="text">
+                        <li>Time management and to-do list app for students, allowing users to create profiles and
+                            share entries with one another.
+                        </li>
+                        <li>Android application written in Java and used SQL.</li>
+                        <li>Synced data with Firebase Realtime Database.</li>
+                        <li>Individual project, related to Private Bilkent High School.</li>
+                    </ul>
+                </div>
+                <div class="detailedInfo" id="details_eda">
+                    <hr class="line">
+                </div>
+            </div>
+
+            <div class="card projectCard" id="card_glass">
+                <div class="floating">
+                    <img src="docs/projects/glass/logo.png" class="small-logo" alt="AlpGlass">
+                </div>
+
+                <div class="top">
+                    <p class="text"><b>AlpGlass</b></p>
+                    <p class="subText">(Sep 2017 – May 2018)</p>
+                    <div class="more">
+                        <a onclick="toggleDetails(this)" data-project="glass" data-loaded="false"
+                           class="details unselectable" id="details_toggle_glass">Show Readme</a>
+                    </div>
+                </div>
+                <div class="briefInfo">
+                    <ul class="text">
+                        <li>A smart glass prototype, made with Arduino, communicating with its Android app over
+                            Bluetooth to convert speech to text, and translate recognized text to preferred language
+                            instantly and reflect the result text to a transparent material in front of the eye. It was
+                            mainly developed for instant translations and people having difficulty with hearing.
+                        </li>
+                        <li>Android side written in Java, and Arduino side written in C++ and used HC-06 Bluetooth
+                            module for communication.
+                        </li>
+                        <li>Attended 12th International MoE Robot Competition and got into the 10th place.</li>
+                        <li>Hardware project.</li>
+                        <li>Personal project.</li>
+                    </ul>
+                </div>
+                <div class="detailedInfo" id="details_glass">
+                    <hr class="line">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="languages">
+        <div class="container">
+            <h2 class="title">Technologies</h2>
+            <p class="text">These are the technologies and coding languages that I am familiar with and/or have
+                previously used in my projects.</p>
+
+            <div class="grid">
+                <div class="gridCard">
+                    <img src="res/icons/js.png" class="smaller-logo icon" alt="Java script">
+                    <p class="text"><b>Java Script</b></p>
+                </div>
+
+                <div class="gridCard">
+                    <img src="res/icons/java.png" class="smaller-logo icon" alt="Java">
+                    <p class="text"><b>Java</b></p>
+                </div>
+
+                <div class="gridCard">
+                    <img src="res/icons/php.png" class="smaller-logo icon" alt="PHP">
+                    <p class="text"><b>PHP</b></p>
+                </div>
+
+                <div class="gridCard">
+                    <img src="res/icons/cpp.png" class="smaller-logo icon" alt="Cpp">
+                    <p class="text"><b>C++</b></p>
+                </div>
+
+                <div class="gridCard">
+                    <img src="res/icons/python.png" class="smaller-logo icon" alt="Python">
+                    <p class="text"><b>Python</b></p>
+                </div>
+
+                <div class="gridCard">
+                    <img src="res/icons/nodejs.png" class="smaller-logo icon" alt="NodeJS">
+                    <p class="text"><b>NodeJS</b></p>
+                </div>
+
+                <div class="gridCard">
+                    <img src="res/icons/sql.png" class="smaller-logo icon" alt="SQL">
+                    <p class="text"><b>SQL</b></p>
+                </div>
+
+                <div class="gridCard">
+                    <img src="res/icons/git.png" class="smaller-logo icon" alt="Git">
+                    <p class="text"><b>Git</b></p>
+                </div>
+
+                <div class="gridCard">
+                    <img src="res/icons/gcp.png" class="smaller-logo icon" alt="GCP">
+                    <p class="text"><b>GCP</b></p>
+                </div>
+
+                <div class="gridCard">
+                    <img src="res/icons/firebase.png" class="smaller-logo icon" alt="Firebase">
+                    <p class="text"><b>Firebase</b></p>
+                </div>
+
+                <div class="gridCard">
+                    <img src="res/icons/docker.png" class="smaller-logo icon" alt="Docker">
+                    <p class="text"><b>Docker</b></p>
+                </div>
+
+                <div class="gridCard">
+                    <img src="res/icons/rest.png" class="smaller-logo icon" alt="REST API">
+                    <p class="text"><b>REST API</b></p>
+                </div>
+
+                <div class="gridCard">
+                    <img src="res/icons/android-studio.png" class="smaller-logo icon" alt="Android Studio">
+                    <p class="text"><b>Android Studio</b></p>
+                </div>
+
+                <div class="gridCard">
+                    <img src="res/icons/html.png" class="smaller-logo icon" alt="HTML">
+                    <p class="text"><b>HTML</b></p>
+                </div>
+
+                <div class="gridCard">
+                    <img src="res/icons/css.png" class="smaller-logo icon" alt="CSS">
+                    <p class="text"><b>CSS</b></p>
+                </div>
+
+                <div class="gridCard">
+                    <img src="res/icons/verilog.png" class="smaller-logo icon" alt="System verilog">
+                    <p class="text"><b>System Verilog</b></p>
+                </div>
+
+                <div class="gridCard">
+                    <img src="res/icons/assembly.png" class="smaller-logo icon" alt="Assembly">
+                    <p class="text"><b>Assembly</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <h2 class="title">L<a onclick="ee0()" class="clkOnMe" id="eeStarter">a</a>ngu<span
+                    class="accentColor">a</span>ges</h2>
+            <div class="ee" id="ee0">
+                <div class="eeInfo">
+                    <div class="eeInfoTitle unselectable">
+                        <img class="eeIcon" src="res/icons/ee.png" alt="Easter egg">
+                        <p class="eeTitle">Off-limit</p>
+                    </div>
+                    <p class="eeText">Scroll up, and up, and up... 🎵 Don't Stop Believin' 🎵</p>
+                </div>
+            </div>
+
+            <ul class="text">
+                <li>English: Professional working proficiency (C2)</li>
+                <li>French: Elementary proficiency (A2)</li>
+                <li>Turkish: Native language</li>
+            </ul>
+        </div>
+    </div>
+    <div class="section" id="activities">
+        <div class="container">
+            <h2 class="title"><span class="accentColor">A</span>ctivities</h2>
+            <p class="text">Other than coding, here are some activities I enjoy:</p>
+
+            <div class="text">
+                <div class="gridT2">
+                    <div class="gridCardT2">
+                        <img src="res/icons/drums.png" class="smaller-logo2 icon" alt="Drums icon">
+                        <p class="text"><b>Playing drums</b><br>(9 years)</p>
+                    </div>
+
+                    <div class="gridCardT2">
+                        <img src="res/icons/tango.png" class="smaller-logo2 icon" alt="Tango icon">
+                        <p class="text"><b>Tango dancing</b><br>(attended 3 national federation competitions)</p>
+                    </div>
+
+                    <div class="gridCardT2">
+                        <img src="res/icons/photo.png" class="smaller-logo2 icon" alt="Photography icon">
+                        <p class="text"><b>Photography</b><br>(<a
+                                href="https://www.flickr.com/alpafyonluoglu/">click</a> to visit my Flickr page)</p>
+                    </div>
+
+                    <div class="gridCardT2">
+                        <img src="res/icons/chess.png" class="smaller-logo2 icon" alt="Chess icon">
+                        <p class="text"><b>Playing chess, hiking</b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sectionFinal">
+        <div class="container center">
+            <p class="contactLogo unselectable"><b>AA</b></p>
+            <p class="text">Contact me via email or social media by clicking on the following icons:</p>
+
+            <div class="contactLinks">
+                <a href="mailto:contact@alpafyonluoglu.dev"><img class="icon" src="res/icons/email.png" alt="Email"></a>
+                <a href="https://github.com/alpafyonluoglu"><img class="icon" src="res/icons/github.png"
+                                                                 alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/alpafyonluoglu/"><img class="icon" src="res/icons/linkedin.png"
+                                                                           alt="LinkedIn"></a>
+                <a href="https://twitter.com/alpafyonluoglu"><img class="icon" src="res/icons/twitter.png"
+                                                                  alt="Twitter"></a>
+                <a href="https://www.flickr.com/alpafyonluoglu/"><img class="icon" src="res/icons/flickr.png"
+                                                                      alt="Flickr"></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer" id="footer">
+        <img src="res/icons/close.png" onclick="ee2()" class="closeFooter hidden" id="closeFooter" alt="Close">
+        <p class="footer-text" id="footerText">Copyright © 2023 Alp Afyonluoğlu | All Rights Reserved</p>
+    </div>
+</div>
+
+<!--Libraries from internet sources-->
+<script src="js/lib/webcomponents-loader.min.js"></script>
+<script type="module" src="js/lib/zero-md.min.js"></script>
+<script src="js/lib/jquery-3.6.0.slim.min.js"></script>
+<script src="js/lib/parallax.min.js"></script>
+<script src="js/lib/jquery.mousewheel.min.js"></script>
+
+<!--Scripts-->
+<script src="js/Spirograph.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
