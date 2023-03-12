@@ -124,21 +124,55 @@ const projects = [
     },
 ]
 
-let stack = [9, 8, 7];
-const maxStackLength = 4;
+let stack = [];
+const maxStackLength = 1;
+let animIndex = 10;
+let continueAnim = true;
 
 loadProjectCards();
 loadProjectCardsDetailed();
+animate();
 
-function viewProjectCardDetailed(element) {
-    let newProjectId = parseInt(element.dataset.orderId);
+function animate() {
+    viewProjectCardDetailed(animIndex, false);
 
+    setTimeout(function () {
+        if (continueAnim) {
+            animIndex = animIndex !== 0 ? animIndex - 1 : projects.length - 1;
+            animate();
+        }
+    }, 3500);
+}
+
+function viewProjectCardDetailed(element, isElement = true, highlightProject = true) {
+    // Get id
+    let newProjectId = element;
+    if (isElement) {
+        newProjectId = parseInt(element.dataset.orderId);
+        continueAnim = false;
+    }
+
+    // Hide previous project
+    if (highlightProject) {
+        projects.forEach((project) => {
+            document.getElementById("mini_card_" + project.id).classList.remove("activeGridCardProject");
+        })
+    }
+
+    // Update stack
     stack = stack.filter(projectId => projectId !== newProjectId);
     stack = stack.slice(0, maxStackLength - 1);
     stack.unshift(newProjectId);
 
+    // Show next project
+    if (highlightProject) {
+        document.getElementById("mini_card_" + projects[newProjectId].id).classList.add("activeGridCardProject");
+    }
+
     loadProjectCardsDetailed();
-    document.getElementById("card_" + projects[newProjectId].id).scrollIntoView({behavior: "smooth", block: "nearest", inline: "center"});
+    if (isElement) {
+        document.getElementById("card_" + projects[newProjectId].id).scrollIntoView({behavior: "smooth", block: "nearest", inline: "center"});
+    }
 }
 
 function loadProjectCards() {
@@ -148,7 +182,7 @@ function loadProjectCards() {
     let orderId = 0;
     projects.forEach((project) => {
         projectCards.innerHTML =
-            "<div class=\"gridCardProject\" onclick=\"viewProjectCardDetailed(this)\" data-order-id=\"" + orderId + "\">\n" +
+            "<div class=\"gridCardProject\" id='mini_card_" + project.id + "' onclick=\"viewProjectCardDetailed(this)\" data-order-id=\"" + orderId + "\">\n" +
             "    <div class=\"floatingAlways\">\n" +
             "        <img src=\"docs/projects/" + project.id + "/logo.png\" class=\"small-logo-project\" alt=\"" + project.name + "\">\n" +
             "    </div>\n" +
@@ -170,7 +204,7 @@ function loadProjectCardsDetailed() {
         let project = projects[projectId];
 
         projectCardsDetailed.innerHTML +=
-            "<div class=\"card projectCard\" id=\"card_" + project.id + "\">\n" +
+            "<div class=\"card projectCard\" id=\"card_" + project.id + "\" style='transition: .3s ease-in-out'>\n" +
             "    <div class=\"floating\">\n" +
             "        <img src=\"docs/projects/" + project.id + "/logo.png\" class=\"small-logo\" alt=\"" + project.name + "\">\n" +
             "    </div>\n" +
@@ -195,5 +229,10 @@ function loadProjectCardsDetailed() {
             "        <hr class=\"line\">\n" +
             "    </div>\n" +
             "</div>";
+
+        let element = document.getElementById("card_" + project.id);
+        element.style.opacity = 0;
+        element.style.transition='opacity .250s';
+        setInterval(() => element.style.opacity = 1, 50);
     })
 }

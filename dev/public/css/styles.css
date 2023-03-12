@@ -643,6 +643,7 @@ a {
 /* Project card */
 .section .projectCard {
     padding: 0;
+    transition: .3s ease-in-out;
 }
 
 .section .detailedCard {
@@ -920,7 +921,13 @@ a {
 .gridCardProject:hover {
     cursor: pointer;
     background-color: var(--background-card);
-    box-shadow: 0 0 5px 0 var( --box-shadow);
+    box-shadow: 0 0 8px 0 var( --box-shadow);
+    filter: brightness(115%);
+}
+
+.activeGridCardProject {
+    background-color: var(--background-card);
+    box-shadow: 0 0 3px 0 var( --box-shadow);
 }
 
 .floatingAlways {
