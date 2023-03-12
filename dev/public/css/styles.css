@@ -25,6 +25,7 @@
     --text-secondary-inverse: #EEEEEE;
     --accent: #FAFAFA;
     --selection: #FAFAFA;
+    --button: #aeaeb2;
     /*--canvas: rgb(28, 28, 30);*/
     /*--canvas-alpha1: rgba(28, 28, 30, 0.01);*/
     /*--canvas-alpha3: rgba(28, 28, 30, 0.03);*/
@@ -55,6 +56,7 @@
         --text-inverse: #212121;
         --text-secondary: #EEEEEE;
         --text-secondary-inverse: #616161;
+        --button: #636366;
         --md-filter: 0.85;
         --icon-filter: 100%;
         --icon-filter-hover: 80%;
@@ -736,14 +738,14 @@ a {
     padding: .4rem .8rem;
     margin-top: .3rem;
     border-radius: var( --radius);
-    background-color: var(--text);
-    color: var( --text-inverse);
-    box-shadow: 0 0 10px 0 var( --box-shadow);
+    background-color: var(--button);
+    color: #FAFAFA;
+    box-shadow: 0 0 5px 0 var( --box-shadow);
     cursor: pointer;
     transition: .2s ease-in-out;
 }
 .section .projectCard .details:hover {
-    filter: brightness(130%);
+    filter: brightness(115%);
 }
 
 .section .projectCard .projectLinkContainer {
@@ -751,9 +753,9 @@ a {
     height: 2rem;
     margin: .3rem .6rem 0 0;
     padding: .4rem;
-    background-color: var( --text);
+    background-color: var( --button);
     border-radius: var( --radius);
-    box-shadow: 0 0 10px 0 var( --box-shadow);
+    box-shadow: 0 0 5px 0 var( --box-shadow);
     cursor: pointer;
     transition: .2s ease-in-out;
 
@@ -761,14 +763,14 @@ a {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-.section .projectCard .projectLinkContainer:hover > .projectLink {
-    filter: brightness( var(--icon-filter-inverse-hover));
+.section .projectCard .projectLinkContainer:hover {
+    filter: brightness( 115%);
 }
 
 .section .projectCard .projectLink {
     height: 1.2rem;
     transition: .2s ease-in-out;
-    filter: brightness( var(--icon-filter-inverse));
+    filter: brightness( 100%);
 }
 
 @media screen and ( min-width: 960px) {
@@ -872,14 +874,9 @@ a {
         padding: .4rem .8rem;
         margin-top: .3rem;
         border-radius: var( --radius);
-        background-color: var(--text);
-        color: var( --text-inverse);
         box-shadow: 0 0 10px 0 var( --box-shadow);
         cursor: pointer;
         transition: .2s ease-in-out;
-    }
-    .section .projectCard .details:hover {
-        filter: brightness(130%);
     }
 
     .section .projectCard .projectLinkContainer {
@@ -887,7 +884,6 @@ a {
         height: 2rem;
         margin: .3rem .6rem 0 0;
         padding: .4rem;
-        background-color: var( --text);
         border-radius: var( --radius);
         box-shadow: 0 0 10px 0 var( --box-shadow);
         cursor: pointer;
@@ -897,14 +893,10 @@ a {
         -moz-box-sizing: border-box;
         box-sizing: border-box;
     }
-    .section .projectCard .projectLinkContainer:hover > .projectLink {
-        filter: brightness( var(--icon-filter-inverse-hover));
-    }
 
     .section .projectCard .projectLink {
         height: 1.2rem;
         transition: .2s ease-in-out;
-        filter: brightness( var(--icon-filter-inverse));
     }
 }
 
