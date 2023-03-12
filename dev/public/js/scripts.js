@@ -287,7 +287,6 @@ function toggleDetails(element) {
                 "       }" +
                 "       hr {" +
                 "           height: 4px;" +
-                "           background-color: #EF6C00;" +
                 "       }" +
                 "   </style>" +
                 "</template></zero-md>";
