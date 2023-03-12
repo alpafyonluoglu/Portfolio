@@ -124,9 +124,11 @@ const projects = [
     },
 ]
 
-let stack = [];
+let stack = [9, 8, 7];
+const maxStackLength = 4;
 
 loadProjectCards();
+loadProjectCardsDetailed();
 
 function loadProjectCards() {
     const projectCards = document.getElementById("projectCards");
@@ -144,5 +146,41 @@ function loadProjectCards() {
             "    </div>" +
             "</div>"
         + projectCards.innerHTML;
+    })
+}
+
+function loadProjectCardsDetailed() {
+    const projectCardsDetailed = document.getElementById("projectCardsDetailed");
+    projectCardsDetailed.innerHTML = "";
+
+    stack.forEach((projectId) => {
+        let project = projects[projectId];
+
+        projectCardsDetailed.innerHTML +=
+            "<div class=\"card projectCard\" id=\"card_" + project.id + "\">\n" +
+            "    <div class=\"floating\">\n" +
+            "        <img src=\"docs/projects/" + project.id + "/logo.png\" class=\"small-logo\" alt=\"" + project.name + "\">\n" +
+            "    </div>\n" +
+            "    <div class=\"top\">\n" +
+            "        <p class=\"text\"><b>" + project.name + "</b></p>\n" +
+            "        <p class=\"subText\">" + project.date + "</p>\n" +
+            "        <div class=\"more\">\n" +
+                         (project.github ? "<a href=\"" + project.github + "\" class=\"projectLinkContainer unselectable\">\n" +
+                         "    <img src=\"res/icons/github.png\" class=\"projectLink\" alt=\"GitHub Link\"></a>\n" : "") +
+                         (project.url ? "<a href=\"" + project.url + "\" class=\"projectLinkContainer unselectable\">\n" +
+                         "    <img src=\"/res/icons/link.png\" class=\"projectLink\" alt=\"Link\"></a>\n" : "") +
+                         (project.readme ? "<a onclick=\"toggleDetails(this)\" data-project=\"" + project.id + "\" data-loaded=\"false\"\n" +
+                         "    class=\"details unselectable\" id=\"details_toggle_planner\">Show Readme</a>\n" : "") +
+            "        </div>\n" +
+            "    </div>\n" +
+            "    <div class=\"briefInfo\">\n" +
+            "        <ul class=\"text\">\n" +
+                         project.details.split("\n").map(line => "<li>" + line + "</li>").join("") +
+            "        </ul>\n" +
+            "    </div>\n" +
+            "    <div class=\"detailedInfo\" id=\"details_" + project.id + "\">\n" +
+            "        <hr class=\"line\">\n" +
+            "    </div>\n" +
+            "</div>";
     })
 }
