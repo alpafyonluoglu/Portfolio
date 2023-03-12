@@ -138,6 +138,7 @@ function viewProjectCardDetailed(element) {
     stack.unshift(newProjectId);
 
     loadProjectCardsDetailed();
+    document.getElementById("card_" + projects[newProjectId].id).scrollIntoView({behavior: "smooth", block: "nearest", inline: "center"});
 }
 
 function loadProjectCards() {

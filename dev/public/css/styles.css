@@ -911,8 +911,6 @@ a {
 /* Grid project cards */
 .gridCardProject {
     border-radius: var(--radius);
-    box-shadow: 0 0 5px 0 var( --box-shadow);
-    background-color: var(--background-card);
     width: 96%;
     margin-left: 2%;
     padding: .3rem;
@@ -929,9 +927,8 @@ a {
 }
 .gridCardProject:hover {
     cursor: pointer;
-    transform: scale(1.02);
-    filter: brightness(110%);
-    box-shadow: 0 0 10px 0 var( --box-shadow);
+    background-color: var(--background-card);
+    box-shadow: 0 0 5px 0 var( --box-shadow);
 }
 
 .floatingAlways {
