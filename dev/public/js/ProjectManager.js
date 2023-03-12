@@ -58,7 +58,7 @@ const projects = [
     {
         id: "ibevi",
         name: "Student Registry App",
-        desc: "Secure cloud-based database",
+        desc: "Encrypted cloud-based database",
         date: "(Jun 2020 – Jul 2020)",
         readme: true,
         details: "A database app developed for \"IB Evi\" to register and query information about students.\n" +
