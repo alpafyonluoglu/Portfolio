@@ -917,7 +917,7 @@ a {
     width: 96%;
     margin-left: 2%;
     padding: .3rem;
-    margin-bottom: 1rem;
+    margin-bottom: .8rem;
 
     display: flex;
     align-items: center;
@@ -927,18 +927,17 @@ a {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     transition: .2s ease-in-out;
-    filter: brightness(90%);
 }
 .gridCardProject:hover {
     cursor: pointer;
     transform: scale(1.02);
-    filter: brightness(100%);
+    filter: brightness(110%);
     box-shadow: 0 0 10px 0 var( --box-shadow);
 }
 
 .floatingAlways {
     float: left;
-    margin: 0 0 0 1rem;
+    margin: 0 0 0 .3rem;
 
     display: flex;
     justify-content: center;
@@ -953,7 +952,7 @@ a {
 
 .gridCardProjectTextBox {
     width: 100%;
-    padding: 0 1rem;
+    padding: 0 .3rem;
     text-align: left;
 
     -webkit-box-sizing: border-box;

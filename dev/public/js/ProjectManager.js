@@ -130,13 +130,24 @@ const maxStackLength = 4;
 loadProjectCards();
 loadProjectCardsDetailed();
 
+function viewProjectCardDetailed(element) {
+    let newProjectId = parseInt(element.dataset.orderId);
+
+    stack = stack.filter(projectId => projectId !== newProjectId);
+    stack = stack.slice(0, 3);
+    stack.unshift(newProjectId);
+
+    loadProjectCardsDetailed();
+}
+
 function loadProjectCards() {
     const projectCards = document.getElementById("projectCards");
     projectCards.innerHTML = "";
 
+    let orderId = 0;
     projects.forEach((project) => {
         projectCards.innerHTML =
-            "<div class=\"gridCardProject\">\n" +
+            "<div class=\"gridCardProject\" onclick=\"viewProjectCardDetailed(this)\" data-order-id=\"" + orderId + "\">\n" +
             "    <div class=\"floatingAlways\">\n" +
             "        <img src=\"docs/projects/" + project.id + "/logo.png\" class=\"small-logo-project\" alt=\"" + project.name + "\">\n" +
             "    </div>\n" +
@@ -146,6 +157,7 @@ function loadProjectCards() {
             "    </div>" +
             "</div>"
         + projectCards.innerHTML;
+        orderId++;
     })
 }
 
