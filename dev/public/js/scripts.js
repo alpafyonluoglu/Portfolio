@@ -10,7 +10,8 @@ const themes = [
         colorAccentDarkMode: '#ff453a',
         colorSelection: '#ff8f89',
         colorSelectionDarkMode: '#99231d',
-        colorCanvas: 'rgb(25, 6, 5)',
+        colorCanvas: 'rgb(64, 15, 12)',
+        colorCanvasDarkMode: 'rgb(25, 6, 5)',
         shadeAnimPercentage: 2,
         linkedSpirographId: 0
     },
@@ -19,7 +20,8 @@ const themes = [
         colorAccentDarkMode: '#ff9f0a',
         colorSelection: '#ffc56c',
         colorSelectionDarkMode: '#995900',
-        colorCanvas: 'rgb(25, 15, 0)',
+        colorCanvas: 'rgb(128, 74, 0)',
+        colorCanvasDarkMode: 'rgb(25, 15, 0)',
         shadeAnimPercentage: 3,
         linkedSpirographId: 1
     },
@@ -28,7 +30,8 @@ const themes = [
         colorAccentDarkMode: '#30d158',
         colorSelection: '#83e39b',
         colorSelectionDarkMode: '#1f7735',
-        colorCanvas: 'rgb(5, 20, 9)',
+        colorCanvas: 'rgb(13, 50, 22)',
+        colorCanvasDarkMode: 'rgb(5, 20, 9)',
         shadeAnimPercentage: 2,
         linkedSpirographId: 2
     },
@@ -37,7 +40,8 @@ const themes = [
         colorAccentDarkMode: '#63e6e2',
         colorSelection: '#a1f0ee',
         colorSelectionDarkMode: '#007772',
-        colorCanvas: 'rgb(0, 20, 19)',
+        colorCanvas: 'rgb(0, 50, 48)',
+        colorCanvasDarkMode: 'rgb(0, 20, 19)',
         shadeAnimPercentage: 3,
         linkedSpirographId: 3
     },
@@ -46,7 +50,8 @@ const themes = [
         colorAccentDarkMode: '#64d2ff',
         colorSelection: '#a2e4ff',
         colorSelectionDarkMode: '#1e688a',
-        colorCanvas: 'rgb(5, 17, 23)',
+        colorCanvas: 'rgb(12, 43, 58)',
+        colorCanvasDarkMode: 'rgb(5, 17, 23)',
         shadeAnimPercentage: 2,
         linkedSpirographId: 4
     },
@@ -55,7 +60,8 @@ const themes = [
         colorAccentDarkMode: '#0a84ff',
         colorSelection: '#6cb5ff',
         colorSelectionDarkMode: '#004a99',
-        colorCanvas: 'rgb(0, 12, 25)',
+        colorCanvas: 'rgb(0, 31, 64)',
+        colorCanvasDarkMode: 'rgb(0, 12, 25)',
         shadeAnimPercentage: 2.5,
         linkedSpirographId: 5
     },
@@ -64,7 +70,8 @@ const themes = [
         colorAccentDarkMode: '#ac8e68',
         colorSelection: '#cdbba4',
         colorSelectionDarkMode: '#614f38',
-        colorCanvas: 'rgb(16, 13, 9)',
+        colorCanvas: 'rgb(81, 66, 47)',
+        colorCanvasDarkMode: 'rgb(16, 13, 9)',
         shadeAnimPercentage: 2,
         linkedSpirographId: 6
     },
@@ -183,12 +190,14 @@ function getTheme() {
 }
 
 function updateTheme(theme, darkMode) {
+    let colorCanvas = darkMode ? theme.colorCanvasDarkMode : theme.colorCanvas;
+
     root.style.setProperty('--accent', darkMode ? theme.colorAccentDarkMode : theme.colorAccent);
     root.style.setProperty('--selection', darkMode ? theme.colorSelectionDarkMode : theme.colorSelection);
-    root.style.setProperty('--canvas', theme.colorCanvas);
-    root.style.setProperty('--canvas-alpha1', theme.colorCanvas.replace(')', ', 0.01)'));
-    root.style.setProperty('--canvas-alpha3', theme.colorCanvas.replace(')', ', 0.03)'));
-    root.style.setProperty('--canvas-clear', theme.colorCanvas.replace(')', ', 0.1)'));
+    root.style.setProperty('--canvas', colorCanvas);
+    root.style.setProperty('--canvas-alpha1', colorCanvas.replace(')', ', 0.01)'));
+    root.style.setProperty('--canvas-alpha3', colorCanvas.replace(')', ', 0.03)'));
+    root.style.setProperty('--canvas-clear', colorCanvas.replace(')', ', 0.1)'));
 }
 
 function updateTopSectionSize() {
