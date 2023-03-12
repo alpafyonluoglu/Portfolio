@@ -134,7 +134,7 @@ function viewProjectCardDetailed(element) {
     let newProjectId = parseInt(element.dataset.orderId);
 
     stack = stack.filter(projectId => projectId !== newProjectId);
-    stack = stack.slice(0, 3);
+    stack = stack.slice(0, maxStackLength - 1);
     stack.unshift(newProjectId);
 
     loadProjectCardsDetailed();
