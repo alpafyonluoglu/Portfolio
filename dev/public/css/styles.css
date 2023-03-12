@@ -909,6 +909,70 @@ a {
     }
 }
 
+/* Grid project cards */
+.gridCardProject {
+    border-radius: var(--radius);
+    box-shadow: 0 0 5px 0 var( --box-shadow);
+    background-color: var(--background-card);
+    width: 96%;
+    margin-left: 2%;
+    padding: .3rem;
+    margin-bottom: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: .2s ease-in-out;
+    filter: brightness(90%);
+}
+.gridCardProject:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    filter: brightness(100%);
+    box-shadow: 0 0 10px 0 var( --box-shadow);
+}
+
+.floatingAlways {
+    float: left;
+    margin: 0 0 0 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.small-logo-project {
+    width: 2.5rem;
+    border-radius: 50%;
+    margin: .4rem 0;
+}
+
+.gridCardProjectTextBox {
+    width: 100%;
+    padding: 0 1rem;
+    text-align: left;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.gridCardProjectText {
+    margin: 0;
+    margin-top: .2rem;
+}
+
+.gridCardProjectSubText {
+    margin: .2rem 0 0 0;
+    font-size: .9rem;
+    line-height: 1rem;
+    color: var(--text-secondary);
+}
+
 /* Profile card */
 .profile-card {
     position: relative;
