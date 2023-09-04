@@ -7,6 +7,7 @@ class Spirograph {
     }
 
     #canvas;
+    #glow;
     #context;
     #configs;
     #theta1 = 0;
@@ -18,8 +19,9 @@ class Spirograph {
     status = Spirograph.STATUS.STOPPED;
     #colored = false;
 
-    constructor(canvas, configs, style = null) {
+    constructor(canvas, configs, style = null, extra = {}) {
         this.#canvas = canvas;
+        this.#glow = extra.glow;
         this.#context = canvas.getContext("2d");
         this.#configs = configs;
         this.#style = style;
@@ -136,10 +138,12 @@ class Spirograph {
             return;
         }
 
-        this.#context.beginPath();
+        let x, y, theta2;
+        // this.#context.save();
         this.#context.strokeStyle = this.#configs.color;
         this.#context.lineWidth = this.#configs.lineWidth ?? 3;
-        let x, y, theta2;
+
+        this.#context.beginPath();
 
         theta2 = this.#getTheta2(this);
         x = this.#getX(this, theta2);
@@ -152,11 +156,31 @@ class Spirograph {
         x = this.#getX(this, theta2);
         y = this.#getY(this, theta2);
         this.#context.lineTo(x, y);
+        this.#context.closePath();
+
+        // this.#context.shadowColor = "#fafafa";
+        // this.#context.shadowOffsetX = 0;
+        // this.#context.shadowOffsetY = 0;
+        // this.#context.shadowBlur = 5;
 
         this.#context.stroke();
+        this.#context.fill();
 
-        this.#context.fillStyle = this.#style ? this.#style.getPropertyValue('--canvas-alpha1') : "rgba(0, 0, 0, 0.01)";
-        this.#context.fillRect(0, 0, this.#canvas.width, this.#canvas.height);
+        // this.#context.shadowColor = 0;
+        // this.#context.shadowOffsetX = 0;
+        // this.#context.shadowOffsetY = 0;
+        // this.#context.shadowBlur = 0;
+        // this.#context.fillStyle = this.#style ? this.#style.getPropertyValue('--canvas-alpha1') : "rgba(0, 0, 0, 0.01)";
+        // this.#context.fillRect(0, 0, this.#canvas.width, this.#canvas.height);
+
+        this.#context.clearRect(0,0,width,height);
+        this.#context.globalAlpha = .9;
+        this.#context.drawImage(canvas1,0,0);
+        this.#context.clearRect(0,0,width,height);
+        this.#context.drawImage(canvas2,0,0);
+
+        // Glow
+        this.#glow.update(x, y);
 
         if (this.#configs.rotationCount !== 0 && this.#theta1 >= 2 * Math.PI * this.#configs.rotationCount) {
             this.#theta1 = 0;

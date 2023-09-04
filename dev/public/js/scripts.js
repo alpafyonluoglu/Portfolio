@@ -111,20 +111,41 @@ const btCv = document.getElementById("btCv");
 const el = document.getElementById("content");
 const root = document.querySelector(':root');
 const canvas = document.getElementById('topCanvas');
+const canvasGlowElement = document.getElementById('canvasGlow');
+const mouseGlowElement = document.getElementById('mouseGlow');
 const subTitle = document.getElementById('subTitle');
 const style = getComputedStyle(document.body);
 
+const glowSize = 60;
 let theme;
 let darkMode;
 let spirograph;
 window.onload = function () {
+    // Glow effect
+    let mouseGlow = new Glow(mouseGlowElement, glowSize);
+    let canvasGlow = new Glow(canvasGlowElement, glowSize);
+    this.addEventListener('mousemove', function (event) {
+        let x = event.clientX;
+        let y = event.clientY;
+        mouseGlow.update(x, y);
+    });
+
+    document.body.addEventListener("mouseleave", function(event){
+        if(event.clientY <= 0 || event.clientX <= 0 || (event.clientX >= window.innerWidth || event.clientY >= window.innerHeight)) {
+            // TODO:
+            console.log("I'm out");
+        }
+    })
+
     // Set theme
     theme = getTheme();
     darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
     updateTheme(theme, darkMode);
 
     // Start Spirograph (with extra animation)
-    spirograph = new Spirograph(canvas, spirographConfigs[theme.linkedSpirographId], style);
+    spirograph = new Spirograph(canvas, spirographConfigs[theme.linkedSpirographId], style, {
+        glow: canvasGlow
+    });
     setTimeout(function () { // In case spirograph were not ready and could not be started on time
         if (spirograph.status === Spirograph.STATUS.LOCKED) {
             startSpirograph();
