@@ -78,14 +78,68 @@ const themes = [
 ]
 
 const spirographConfigs = [
-    {R1: 100, R2: 160, r: 100, rotationCount: 0, sensitivity: 0.1, color: '#fafafa', lineWidth: 3},
-    {R1: 250, R2: 30, r: 100, rotationCount: 0, sensitivity: 0.01, color: '#fafafa', lineWidth: 3},
-    {R1: 350, R2: 122, r: 100, rotationCount: 23, sensitivity: 0.03, color: '#fafafa', lineWidth: 3},
-    {R1: 358, R2: 100, r: 50, rotationCount: 7, sensitivity: 0.02, color: '#fafafa', lineWidth: 3},
-    {R1: 310, R2: 20, r: 25, rotationCount: 0, sensitivity: 0.01, color: '#fafafa', lineWidth: 3},
-    {R1: 357, R2: 247, r: 180, rotationCount: 50, sensitivity: 0.05, color: '#fafafa', lineWidth: 3},
-    {R1: 100, R2: 2, r: 250, rotationCount: 0, sensitivity: 0.001, color: '#fafafa', lineWidth: 3},
-    // {R1: 357, R2: 240, r: 180, rotationCount: 39, sensitivity: 0.05, color: '#fafafa', lineWidth: 3},
+    {
+        R1: 100,
+        R2: 160,
+        r: 100,
+        rotationCount: 0,
+        sensitivity: 0.1,
+        color: '#fafafa',
+        lineWidth: 3
+    },
+    {
+        R1: 200,
+        R2: 96,
+        r: 120,
+        rotationCount: 0,
+        sensitivity: 0.06,
+        color: '#fafafa',
+        lineWidth: 3
+    },
+    {
+        R1: 200,
+        R2: 68,
+        r: 50,
+        rotationCount: 0,
+        sensitivity: 0.04,
+        color: '#fafafa',
+        lineWidth: 3
+    },
+    {
+        R1: 200,
+        R2: 24,
+        r: 80, rotationCount: 0,
+        sensitivity: 0.015,
+        color: '#fafafa',
+        lineWidth: 3
+    },
+    {
+        R1: 72,
+        R2: 160,
+        r: 136,
+        rotationCount: 0,
+        sensitivity: 0.09,
+        color: '#fafafa',
+        lineWidth: 3
+    },
+    {
+        R1: 357,
+        R2: 247,
+        r: 180,
+        rotationCount: 50,
+        sensitivity: 0.05,
+        color: '#fafafa',
+        lineWidth: 3
+    },
+    {
+        R1: 100,
+        R2: 2,
+        r: 250,
+        rotationCount: 0,
+        sensitivity: 0.001,
+        color: '#fafafa',
+        lineWidth: 3
+    }
 ];
 
 let badgeBoxShown = false;
@@ -324,7 +378,7 @@ function plotSpirograph(config) {
     const x0 = canvas.width / 2;
     const y0 = canvas.height / 2;
     if (config.rotationCount === 0) {
-        config.rotationCount = 10;
+        config.rotationCount = 30;
     }
 
     context.beginPath();
