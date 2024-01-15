@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "remote-web-server"
+  },
+  "targets": {
+    "remote-web-server": {
+      "hosting": {
+        "alpafyonluoglu": [
+          "alpafyonluoglu"
+        ]
+      }
+    }
+  }
+}
