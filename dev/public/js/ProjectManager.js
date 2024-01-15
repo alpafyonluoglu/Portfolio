@@ -106,7 +106,7 @@ const projects = [
         id: "planner",
         name: "Planner",
         desc: "Personalized time management",
-        date: "(Aug 2021 - Present)",
+        date: "(Aug 2021 - Dec 2023)",
         readme: true,
         details: "Personal time management application, analyzing calendar events, given activities and user actions to create personalized time plans.\n" +
             "Android application written in Java.\n" +
@@ -116,17 +116,82 @@ const projects = [
         id: "beagle",
         name: "Beagle",
         desc: "Website content monitoring",
-        date: "(Feb 2023 - Present)",
+        date: "(Feb 2023 - Dec 2023)",
         readme: false,
         details: "Web app monitoring given websites and notifying users when change detected. Provides a list of changes to users since the last time they logged in.\n" +
             "Backend written in NodeJS and uses MySQL.\n" +
+            "Personal project."
+    },
+    {
+        id: "linkedout",
+        name: "LinkedOut",
+        desc: "Social media platform",
+        date: "(Feb 2023 - Jun 2023)",
+        readme: false,
+        url: "https://www.linkedout.app/",
+        github: "https://github.com/alpafyonluoglu/Linkedout",
+        details: "LinkedIn-like career-focused social media platform that brings people together based on their interest areas.\n" +
+            "Wrote raw advanced SQL queries.\n" +
+            "Backend written in SpringBoot, containerised with Docker, data stored in PostgreSQL.\n" +
+            "Worked on backend development.\n" +
+            "Group project (4 people), related to Bilkent University."
+    },
+    {
+        id: "filechain",
+        name: "FileChain",
+        desc: "Blockchain for file storage",
+        date: "(Jul 2023 - Aug 2023)",
+        readme: false,
+        details: "Blockchain system for file storage, implemented without using any of the existing blockchain networks or libraries.\n" +
+            "Created a given number of Dockerized node instances dynamically with a bash script.\n" +
+            "Setup Docker network and ensured communication over HTTP via REST.\n" +
+            "Implemented a built-in DNS server in each node, and ensured automated node discovery, linking, and data broadcasting (flood fill algorithm).\n" +
+            "Uploaded files over HTTP, and downloaded by hash or found and downloaded the latest version by name, independent from the connected node.\n" +
+            "Signed and verified files with the user’s private-public key pair, and verified blocks with their hash values.\n" +
+            "Implemented a chain management system to hold multiple chains and choose the one that is the most trustworthy.\n" +
+            "Implemented backend in JavaScript using NodeJS & Express, database using MySQL; used Docker to containerise the node algorithm."
+    },
+    {
+        id: "dogclassifier",
+        name: "Dog Breed Classifier",
+        desc: "ML image processing",
+        date: "(Sep 2023 - Dec 2023)",
+        readme: false,
+        details: "Classified breeds from given dog photos via custom CNN, EfficientNet, and ResNet implementations.\n" +
+            "Implemented and fine-tuned the ResNet model.\n" +
+            "Used Tensorflow and Keras on Python.\n" +
+            "120 dog breeds classified.\n" +
+            "Group project (5 people), related to Bilkent University."
+    },
+    {
+        id: "spotlite",
+        name: "Spotlite",
+        desc: "P2P Music Streaming",
+        date: "(Sep 2023 - Dec 2023)",
+        readme: false,
+        details: "Peer-to-peer distributed music streaming platform.\n" +
+            "Implemented communication of main server over TCP socket.\n" +
+            "Main server written in GoLang, clients written in Python, communication via TCP sockets.\n" +
+            "Group project (4 people), related to Bilkent University."
+    },
+    {
+        id: "wfe",
+        name: "Workflowy Encrypter",
+        desc: "Seamless client-side encryption",
+        date: "(Nov 2023 - Present)",
+        readme: true,
+        url: "https://chromewebstore.google.com/detail/workflowy-encrypter/fohbpcookddpmmhpmgoogodlanhikeib",
+        github: "https://github.com/alpafyonluoglu/WorkflowyEncrypter",
+        details: "A browser extension providing seamless client-side encryption for Workflowy.\n" +
+            "Injects custom script to monitor and modify all incoming and outgoing network requests.\n" +
+            "Open-sourced on GitHub and published on Chrome WebStore.\n" +
             "Personal project."
     },
 ]
 
 let stack = [];
 const maxStackLength = 1;
-let animIndex = 10;
+let animIndex = projects.length - 1;
 let continueAnim = true;
 
 loadProjectCards();
