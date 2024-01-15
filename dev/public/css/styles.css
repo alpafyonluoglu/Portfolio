@@ -611,7 +611,7 @@ a {
 }
 
 .smaller-logo2 {
-    width: 4rem;
+    width: 3rem;
     margin-right: 1rem;
 }
 
@@ -635,7 +635,7 @@ a {
     }
 
     .smaller-logo2 {
-        width: 4.5rem;
+        width: 3.5rem;
         margin-right: 1.5rem;
     }
 }
@@ -1101,7 +1101,7 @@ a {
         margin: auto;
         display: grid;
         grid-gap: 1px;
-        grid-template-columns: repeat( 2, 1fr);
+        grid-template-columns: repeat( 3, 1fr);
     }
 
     .gridCard {
@@ -1404,6 +1404,17 @@ a {
     }
     50% {
         border-color: var(--accent);
+    }
+}
+
+.contactText {
+    width: 70%;
+    margin: 0 auto
+}
+
+@media screen and ( min-width: 960px) {
+    .contactText {
+        width: 40%;
     }
 }
 

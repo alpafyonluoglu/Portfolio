@@ -166,7 +166,7 @@ const projects = [
     {
         id: "spotlite",
         name: "Spotlite",
-        desc: "P2P Music Streaming",
+        desc: "P2P music streaming",
         date: "(Sep 2023 - Dec 2023)",
         readme: false,
         details: "Peer-to-peer distributed music streaming platform.\n" +
