@@ -17,7 +17,7 @@ the context. For example, receiving an SMS saying "Yes" may lead to different ac
 messages were about.
 - **Access levels:** Set trusted contacts having full control over Ada, or blacklist contacts to prevent them from accessing
 to Ada. By default, Ada does not talk with anyone outside of Turkey or people who are not saved in your contacts.
-- *Privacy:** While Ada considers your location and calendar events when communicating with your contacts, such data is 
+- **Privacy:** While Ada considers your location and calendar events when communicating with your contacts, such data is 
 only used to estimate when you will be available to reach back to the caller. No personal information is sent explicitly 
 to your contacts, except your trusted contacts, who has the option to access your location if they request to learn where
 exactly you are at. This is a feature allowing trusted contacts to locate the device when it is lost or find the device

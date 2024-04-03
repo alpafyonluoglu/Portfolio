@@ -6,8 +6,9 @@ const projects = [
         date: "(Feb 2022 - Present)",
         readme: false,
         github: "https://github.com/alpafyonluoglu/Portfolio",
-        details: "This website, used as a portfolio to present my projects.\n" +
-            "Written in JS, HTML, and CSS."
+        details: "This website, a cozy home for all the colorful projects I have developed.\n" +
+            "An interactive place for my projects to tell their life stories and showcase their capabilities.\n" +
+            "The website itself is written in pure JS, HTML, and CSS."
     },
     {
         id: "glass",
@@ -15,8 +16,10 @@ const projects = [
         desc: "Smart glass prototype",
         date: "(Sep 2017 – May 2018)",
         readme: false,
-        details: "A smart glass prototype, made with Arduino, communicating with its Android app over Bluetooth to convert speech to text, and translate recognized text to preferred language instantly and reflect the result text to a transparent material in front of the eye. It was mainly developed for instant translations and people having difficulty with hearing.\n" +
-            "Android side written in Java, and Arduino side written in C++ and used HC-06 Bluetooth module for communication.\n" +
+        details: "A smart glass prototype, made with Arduino, communicating with its Android app over Bluetooth.\n" +
+            "Converts speech to text, translates recognized text to preferred language instantly, and reflects the result to a transparent material in front of the eye.\n" +
+            "Mainly developed for instant translations and people having difficulty with hearing.\n" +
+            "Android side written in Java, Arduino side written in C++ and used HC-06 Bluetooth module for communication.\n" +
             "Attended 12th International MoE Robot Competition and got into the 10th place.\n" +
             "Hardware project.\n" +
             "Personal project."
@@ -28,7 +31,7 @@ const projects = [
         date: "(Dec 2018 – Mar 2020)",
         readme: false,
         url: "http://alp.afyonluoglu.org/eda-asistan/",
-        details: "Time management and to-do list app for students, allowing users to create profiles and share entries with one another.\n" +
+        details: "Simple time management and to-do list app for students, allowing users to create profiles and share entries with one another.\n" +
             "Android application written in Java and used SQL.\n" +
             "Synced data with Firebase Realtime Database.\n" +
             "Individual project, related to Private Bilkent High School."
@@ -41,7 +44,7 @@ const projects = [
         readme: false,
         github: "https://github.com/alpafyonluoglu/Trainly",
         details: "A mobile app for creating profiles, managing train data, and ticket entries to buy/sell tickets.\n" +
-            "Android application written in Java and used SQL.\n" +
+            "Android application written in Java and uses SQL.\n" +
             "Synced data with Firebase Realtime Database.\n" +
             "Group project (4 people), related to Bilkent University."
     },
@@ -51,8 +54,9 @@ const projects = [
         desc: "SMS chatbot for missed calls",
         date: "(Jun 2018 – Dec 2020)",
         readme: true,
-        details: "SMS chatbot. Personal assistant app analyzing and responding to SMS messages when a missed call is received, or someone sends an SMS message that mentions Ada. Depending on the access level of the person sending messages, the app performs actions and makes changes on the device while considering coarse device location and what is on device owner's calendar.\n" +
-            "Android application developed in Java.\n" +
+        details: "Personal assistant app analyzing and responding to SMS messages when a missed call is received, or someone sends an SMS message that mentions Ada.\n" +
+            "Depending on the access level of the person sending messages, the app performs actions and makes changes on the device while considering coarse device location and what is on device owner's calendar.\n" +
+            "Android app developed in Java.\n" +
             "Personal project."
     },
     {
@@ -62,7 +66,7 @@ const projects = [
         date: "(Jun 2020 – Jul 2020)",
         readme: true,
         details: "A database app developed for \"IB Evi\" to register and query information about students.\n" +
-            "Android application written in Java and used SQL.\n" +
+            "Android app written in Java and uses SQL.\n" +
             "Synced data with Firebase Realtime Database.\n" +
             "Individual project."
     },
@@ -73,7 +77,7 @@ const projects = [
         date: "(Oct 2021 – Oct 2021)",
         readme: true,
         github: "https://github.com/alpafyonluoglu/DualWeb",
-        details: "A simple browser extension allowing users to log into the same website with two different accounts.\n" +
+        details: "Simple browser extension allowing users to log into the same website with two different accounts.\n" +
             "My first open-source project.\n" +
             "Written in JS, HTML, CSS.\n" +
             "Personal project."
@@ -128,7 +132,7 @@ const projects = [
         desc: "Social media platform",
         date: "(Feb 2023 - Jun 2023)",
         readme: false,
-        url: "https://www.linkedout.app/",
+        // url: "https://www.linkedout.app/",
         github: "https://github.com/alpafyonluoglu/Linkedout",
         details: "LinkedIn-like career-focused social media platform that brings people together based on their interest areas.\n" +
             "Wrote raw advanced SQL queries.\n" +
@@ -186,6 +190,43 @@ const projects = [
             "Injects custom script to monitor and modify all incoming and outgoing network requests.\n" +
             "Open-sourced on GitHub and published on Chrome WebStore.\n" +
             "Personal project."
+    },
+    {
+        id: "wizzy",
+        name: "Wizzy",
+        desc: "Integrated AI web assistant",
+        date: "(Feb 2024 - Present)",
+        readme: false,
+        details: "LLM-powered assistant for the web in the form of a browser extension.\n" +
+            "Converts texts, mails, messages to either to-do items and sends to Todoist or to calendar events and sends to Google Calendar. Working on further integration with third party apps.\n" +
+            "Uses Gemini API for text processing.\n" +
+            "Personal project, developed for personal use."
+    },
+    {
+        id: "coview",
+        name: "Coview",
+        desc: "Code reviewer",
+        date: "(Feb 2024 - Present)",
+        readme: false,
+        details: "Multi-agent LLM powered code review assistant.\n" +
+            "Aims to provide accurate code reviews via code indexing, multi-agent conversation framework, ChatGPT API, and Gemini API.\n" +
+            "Integrates with GitHub for automated code reviews.\n" +
+            "Group project (4 people), related to Bilkent University."
+    },
+    {
+        id: "capsule",
+        name: "Capsule",
+        desc: "Outfit recommendations",
+        date: "(Sep 2023 - Present)",
+        readme: false,
+        url: "https://www.capsule.style/",
+        details: "ML-powered wardrobe tracking and outfit recommendation app for iOS.\n" +
+            "Aims to follow the 'capsule wardrobe' approach to provide as many outfit recommendations from few clothing items as possible while ensuring recommended outfits are stylish.\n" +
+            "Provides a platform for users to manage their outfit combinations and access analytics about their wardrobe.\n" +
+            "Structured U-net-based multi-layered segmentation model for extracting clothing items from selfies.\n" +
+            "Implemented custom fine-grained classification model for labelling clothing items.\n" +
+            "Implemented matching model to match clothing items with the ones already existing on a user's wardrobe.\n" +
+            "Group project (5 people), related to Bilkent University."
     },
 ]
 
