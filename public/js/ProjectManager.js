@@ -208,6 +208,7 @@ const projects = [
         desc: "Code reviewer",
         date: "(Feb 2024 - Present)",
         readme: false,
+        url: "https://github.com/apps/CoviewBot",
         details: "Multi-agent LLM powered code review assistant.\n" +
             "Aims to provide accurate code reviews via code indexing, multi-agent conversation framework, ChatGPT API, and Gemini API.\n" +
             "Integrates with GitHub for automated code reviews.\n" +
